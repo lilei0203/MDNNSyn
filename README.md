@@ -1,5 +1,9 @@
 # MDNNSynergy
-[Framework of MDNNSyn]
+In the "Comparison between different types of models" experiment of the study "A Review of Deep Learning Approaches for Drug Synergy Prediction in Cancer", MDNNSyn is retrained using the DrugComb dataset, and the hyperparameters are readjusted to ensure a fair comparison under consistent experimental conditions:
+
+*batchsize=32
+*learning rate=0.0001
+*epoch=2000 
 
 # Requirements
 * python 3.7
