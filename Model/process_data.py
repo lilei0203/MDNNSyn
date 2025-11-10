@@ -13,10 +13,19 @@ def getData(dataset):
         drug_smiles_file = '../../Data/ONEIL-COSMIC/drug_smiles.csv'
         cline_feature_file = '../../Data/ONEIL-COSMIC/cell line_gene_expression.csv'
         drug_synergy_file = '../../Data/ONEIL-COSMIC/drug_synergy.csv'
-    else:
+
+    elif dataset == 'ALMANAC':
         drug_smiles_file = '../../Data/ALMANAC-COSMIC/drug_smiles.csv'
         cline_feature_file = '../../Data/ALMANAC-COSMIC/cell line_gene_expression.csv'
         drug_synergy_file = '../../Data/ALMANAC-COSMIC/drug_synergy.csv'
+
+    elif dataset == 'DrugComb':
+        drug_smiles_file = '../../Data/DrugComb/drug_smiles.csv'
+        cline_feature_file = '../../Data/DrugComb/cell line_gene_expression.csv'
+        drug_synergy_file = '../../Data/DrugComb/drug_synergy.csv'
+
+    else:
+        raise ValueError(f"Unsupported dataset: {dataset}")
     drug = pd.read_csv(drug_smiles_file, sep=',', header=0, index_col=[0])
     drug_data = pd.DataFrame()
     drug_smiles = []
