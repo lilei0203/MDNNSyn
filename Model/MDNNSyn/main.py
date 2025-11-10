@@ -133,7 +133,7 @@ def test(drug_fea_set, cline_fea_set, synergy_adj, drug_sim_mat, cline_sim_mat, 
 
 
 if __name__ == '__main__':
-    dataset_name = 'ONEIL'  # or ONEIL
+    dataset_name = 'DrugComb'  # or ONEIL
     seed = 0
     cv_mode_ls = [1, 2, 3]
     epochs = 2000
